@@ -1,9 +1,12 @@
 
 function setup() {
-  canvas = createCanvas(300, 300);
-  video = createCapture(300, 300);
-  video.hide();
-  classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/v_sl95BzE/model.json',modelLoaded);
+  
+  canvas = createCanvas(380, 380);
+    canvas.center();
+    video = createCapture(VIDEO);
+    video.size(380, 380);
+    video.hide();
+    classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/v_sl95BzE/model.json',modelLoaded);
 
 }
    function draw(){
