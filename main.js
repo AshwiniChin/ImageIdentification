@@ -1,31 +1,32 @@
 
 function setup() {
-  
+
   canvas = createCanvas(380, 380);
-    canvas.center();
-    video = createCapture(VIDEO);
-    video.size(380, 380);
-    video.hide();
-    classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/v_sl95BzE/model.json',modelLoaded);
+  canvas.center();
+  video = createCapture(VIDEO);
+  video.size(380, 380);
+  video.hide();
+  classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/v_sl95BzE/model.json', modelLoaded);
 
 }
-   function draw(){
-    image(video, 0, 0, 300, 300);
-   }   
+function draw() {
+  image(video, 0, 0, 300, 300);
+}
 
 
-  console.log('ml5 version:', ml5.version);
-  
+console.log('ml5 version:', ml5.version);
 
-  function modelLoaded() {
-    console.log('Model Loaded!');
-  }
-      
-  function check()
-  {
-    img = save('object.png');
-    classifier.classify(img, gotResult);
-  }
+
+function modelLoaded() {
+  console.log('Model Loaded!');
+}
+function capture() {
+  img = save('object.png');
+  document.getElementById.innerHTML="<img id='image1'src='"+img.src+"'/>";
+}
+function check() {
+  classifier.classify(img, gotResult);
+}
 
 
 function gotResult(error, results) {
