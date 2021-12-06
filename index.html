@@ -1,42 +1,36 @@
+
 <html>
 
-<head>
-    <title>Image recognition</title>
-    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-    <div class="container">
-
-        <center>
-            <h1>Image Recognition</h1>
-            <br>
-
-            <p>Following objects can be identified by the app: </p>
-
-            <h4 class="objectsNames">
-                Watch || Bag || Phone|| Water Bottle                
-            </h4>
-
-            <label>Webcam</label>
-            <br><br>
-            <div id="result"></div>
-            <br><br>
-            <button onclick="capture();">Capture Image</button>
-            <br><br>
-            <button onclick="check();" >Identify Image</button>
-            <br><br>
-
-            <p>Object : <span id="result_object_name"></span> </p>
-            <p>Accuracy : <span id="result_object_accuracy"></span> </p>
-        </center>
-
-    </div>
-    <script src="main.js"></script>
-
-</body>
-
-</html>
+    <head>
+        <title>Image recognition</title>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">
+    
+    </head>
+    
+    <body>
+        <div class="container">
+    
+            <center>
+                <h1>Image Recognition</h1>
+                    
+                <p>Following objects can be identified by the app: </p>
+    
+                <h4 class="objectsNames">
+                    Watch || Bag || Phone|| Water Bottle                
+                </h4>
+                <p>Object : <span id="result_object_name"></span> </p>
+                <p>Accuracy : <span id="result_object_accuracy"></span> </p>
+                  
+                <button onclick="check();" >Identify Image</button><br> <br>
+                <label>Webcam Preview</label>
+                                               
+            </center>
+    
+        </div>
+        <script src="main.js"></script>
+    
+    </body>
+    
+    </html>
